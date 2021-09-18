@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Mellow yo </title>
+    </head>
+    <body>
+        <h1> Mellow </h1>
+        {% for category, tasks in tasks %}
+            <h3> {{ category }} </h3>
+            {% for task in tasks %}
+                <div class="task">
+                    <h4> {{ task.name }} </h4>
+                    <p> {{ task.description }} </p>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </body>
+</html>
