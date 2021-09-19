@@ -34,7 +34,7 @@ def tasks():
 
     cursor = conn.cursor()
     queried_tasks = cursor.execute("""
-        SELECT title ,description ,category.name AS category
+        SELECT title, description, category.name AS category
         FROM task JOIN category WHERE task.id_category = category.id
     """).fetchall()
     cursor.close()
