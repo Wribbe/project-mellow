@@ -1,26 +1,25 @@
-<!doctype html>
-<html>
-    <head>
-        <title> Mellow yo </title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    </head>
-    <body>
-        <header><h1> Mellow </h1></header>
-        <section>
-            {% for category, tasks in tasks.items() %}
-                <div class="column">
-                    <h3> {{ category }} </h3>
+{% extends 'base.html' %}
+
+
+{% block header %}
+    {% block title %}<h1>Main</h1>{% endblock %}
+    <a href="{{ url_for('task_add') }}">
+        <button id="task_add">+</button>
+    </a>
+{% endblock %}
+
+{% block section %}
+    {% for category, tasks in tasks.items() %}
+        <div class="column">
+            <h3> {{ category }} </h3>
+            <hr>
+            {% for task in tasks %}
+                <div class="task">
+                    <h4 class="title_task"> {{ task.title | title }} </h4>
                     <hr>
-                    {% for task in tasks %}
-                        <div class="task">
-                            <h4 class="title_task"> {{ task.title | title }} </h4>
-                            <hr>
-                            <p> {{ task.description }} </p>
-                        </div>
-                    {% endfor %}
+                    <p> {{ task.description }} </p>
                 </div>
             {% endfor %}
-        </section>
-    </body>
-</html>
+        </div>
+    {% endfor %}
+{% endblock %}

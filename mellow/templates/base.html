@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Mellow - {% block title %}{% endblock %} </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header><h1>Mellow</h1>{% block header %}{% endblock %}</header>
+        <section>{% block section %}{% endblock %}</section>
+    </body>
+</html>
