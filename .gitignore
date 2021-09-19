@@ -1,3 +1,4 @@
 *.py[cd]
 venv
 *.egg-info
+data
