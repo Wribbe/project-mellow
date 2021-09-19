@@ -5,11 +5,11 @@
     </head>
     <body>
         <h1> Mellow </h1>
-        {% for category, tasks in tasks %}
+        {% for category, tasks in tasks.items() %}
             <h3> {{ category }} </h3>
             {% for task in tasks %}
                 <div class="task">
-                    <h4> {{ task.name }} </h4>
+                    <h4> {{ task.title }} </h4>
                     <p> {{ task.description }} </p>
                 </div>
             {% endfor %}
