@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding-bottom: 1em;
+    margin: 1em;
+    max-width: 20em;
+    border-radius: 10px;
+}
+
+.column h3 {
+    width: 100%;
+    text-align: center;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.task {
+    margin: 1em 1em 0 1em;
+    padding: 1em 1em 0 1em;
+    min-height: 8em;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.task h4 {
+    margin-bottom: 1em;
+}
+
+.task p {
+    margin-top: 1em;
+}

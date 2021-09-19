@@ -2,17 +2,25 @@
 <html>
     <head>
         <title> Mellow yo </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
     <body>
-        <h1> Mellow </h1>
-        {% for category, tasks in tasks.items() %}
-            <h3> {{ category }} </h3>
-            {% for task in tasks %}
-                <div class="task">
-                    <h4> {{ task.title }} </h4>
-                    <p> {{ task.description }} </p>
+        <header><h1> Mellow </h1></header>
+        <section>
+            {% for category, tasks in tasks.items() %}
+                <div class="column">
+                    <h3> {{ category }} </h3>
+                    <hr>
+                    {% for task in tasks %}
+                        <div class="task">
+                            <h4 class="title_task"> {{ task.title | title }} </h4>
+                            <hr>
+                            <p> {{ task.description }} </p>
+                        </div>
+                    {% endfor %}
                 </div>
             {% endfor %}
-        {% endfor %}
+        </section>
     </body>
 </html>
