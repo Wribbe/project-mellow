@@ -15,9 +15,10 @@ def db():
             conn.executescript(f.read().decode('utf8'))
 
         cursor = conn.cursor()
-        for category in CATEGORIES:
+        for ii, category in enumerate(CATEGORIES):
             cursor.execute(
-                "INSERT INTO category (name) VALUES (?)", (category,)
+                "INSERT INTO category (name, num_order) VALUES (?,?)",
+                (category, ii)
             )
         conn.commit()
         cursor.close()

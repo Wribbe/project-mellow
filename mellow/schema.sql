@@ -1,6 +1,7 @@
 CREATE TABLE category (
     id INTEGER PRIMARY KEY AUTOINCREMENT
     ,name STRING NOT NULL
+    ,num_order INTEGER NOT NULL
 );
 
 CREATE TABLE task (
