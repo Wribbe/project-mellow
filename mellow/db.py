@@ -39,7 +39,6 @@ def tasks():
     """).fetchall()
     cursor.close()
 
-    breakpoint()
     for task in queried_tasks:
         tasks[task['category']].append(task)
 
