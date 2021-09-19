@@ -5,9 +5,12 @@
 
 html, body {
     height: 100%;
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
+}
+
+body {
+    margin: 1em;
 }
 
 section {
@@ -21,8 +24,7 @@ section {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    padding-bottom: 1em;
-    margin: 1em;
+    margin: 1em 1em 0 1em;
     max-width: 20em;
     border-radius: 10px;
 }
@@ -47,4 +49,32 @@ section {
 
 .task p {
     margin-top: 1em;
+}
+
+#task_add {
+    width: 2em;
+    height: 2em;
+    margin-left: 3em;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    margin-right: .4em;
+}
+
+#input_task_add {
+}
+
+#input_task_add label {
+    display: inline-block;
+    width: 6.5em;
+    text-align: right;
+}
+
+#input_task_add div {
+    margin-bottom: .3em;
 }

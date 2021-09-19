@@ -44,3 +44,16 @@ def tasks():
         tasks[task['category']].append(task)
 
     return tasks
+
+
+def create_task(title, description=""):
+
+    conn = db()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        "INSERT INTO task(title, description, id_category) VALUES (?,?,?)",
+        (title, description, 1)
+    )
+    conn.commit()
+    cursor.close()

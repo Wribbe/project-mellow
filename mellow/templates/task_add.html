@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    {% block title %}<h1>Add Task</h1>{% endblock %}
+{% endblock %}
+
+{% block section %}
+    <div id="input_task_add">
+        <form action="{{ url_for('task_add') }}" method="POST">
+            <div>
+                <label>Title:</label>
+                <input name='title' required></input>
+            </div>
+            <div>
+                <label>Description:</label>
+                <input name='description'></input>
+            </div>
+            <button>Create Task</button>
+        </form>
+    </div>
+{% endblock %}
